@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyBurger</string>
+    <string name="random_burger">Random Burger</string>
 </resources>

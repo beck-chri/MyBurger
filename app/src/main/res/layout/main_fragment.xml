@@ -1,23 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
         tools:context=".ui.main.MainFragment">
 
+        <ImageView
+            android:id="@+id/burger_otd_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:padding="10sp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginTop="20sp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_burger_clip_art"
+            tools:src="@drawable/ic_burger_clip_art" />
+
+        <RelativeLayout
+            android:id="@+id/name_price_ll"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:orientation="horizontal"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp">
+
+            <TextView
+                android:id="@+id/burger_otd_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/poppins_black"
+                android:textSize="25sp"
+                android:text="Lecker Vegan-Burger"/>
+
+            <TextView
+                android:id="@+id/burger_otd_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="22sp"
+                android:text="6,50 €" />
+        </RelativeLayout>
+
         <TextView
-            android:id="@+id/message"
+            android:id="@+id/number_of_ingredients_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MainFragment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="40sp"
+            android:textSize="20sp"
+            android:text="8 Zutaten" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/ingredients_list_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:textSize="17sp"
+            android:text="super lecker Tempeh, lecker Sösschen, ganz lecker Salaetchen, geschmeidige Avocado, knackige Guerkchen, fruchtige Tomaetchen und feurige Chiliflocken" />
+
+        <Button
+            android:id="@+id/shuffle_ingredients_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/random_burger"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="10sp"/>
+    </LinearLayout>
 </layout>
