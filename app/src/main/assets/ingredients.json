@@ -20,13 +20,13 @@
          },
          {
             "number":4,
-            "name":["Vollkorn-Brötchen","whole grain bun"],
+            "name":["Vollkorn-Brötchen","Whole grain bun"],
             "price":110,
             "diet_type":"VEGAN"
          },
          {
             "number":5,
-            "name":["Brioche-Brötchen","brioche bun"],
+            "name":["Brioche-Brötchen","Brioche bun"],
             "price":85,
             "diet_type":"VEGGIE"
          }

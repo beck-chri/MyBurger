@@ -9,16 +9,21 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
-import java.lang.ClassCastException
-import java.lang.Exception
-import java.lang.IllegalArgumentException
+import java.util.*
 
 class JsonReader(private val context: Context) : RawReader {
     private val numberKey = "number"
     private val nameKey = "name"
     private val priceKey = "price"
     private val dietTypeKey = "diet_type"
-    private val langIndex = 0 // change to 1 for english names
+    private var langIndex = 1 //1 for english names, 0 for german
+
+    init {
+        val locale = context.resources.configuration.locales[0]
+        if (locale == Locale.GERMANY) {
+            langIndex = 0
+        }
+    }
 
     override fun readIngredients(fileName: String): MutableList<Ingredient> {
         val jsonString = getJsonDataFromAsset(context, fileName)
