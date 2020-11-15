@@ -37,8 +37,10 @@ class MainFragment : Fragment() {
         viewModel.randomBurger.observe(viewLifecycleOwner, {
             binding.burgerOtdNameTv.text = viewModel.getRandomBurgerName()
 
-            val ingredientsString = resources.getString(R.string.ingredients)
+            var ingredientsString = resources.getString(R.string.ingredients)
                 .format(viewModel.getRandomBurgerIngredientCount())
+            val dietTypeStr = resources.getString(viewModel.getRandomBurgerDietType()?.stringId!!) //TODO
+            ingredientsString += " ($dietTypeStr)"
             binding.numberOfIngredientsTv.text = ingredientsString
 
             binding.burgerOtdPriceTv.text = viewModel.getRandomBurgerPrice()

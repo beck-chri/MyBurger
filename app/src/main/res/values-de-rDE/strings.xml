@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MyBurger</string>
-    <string name="veggie">Vegetarisch</string>
-    <string name="vegan">Vegan</string>
+    <string name="veggie">vegetarisch</string>
+    <string name="vegan">vegan</string>
     <string name="random_burger">Zufälliger Burger</string>
     <string name="ingredients">%d Zutaten</string>
 </resources>

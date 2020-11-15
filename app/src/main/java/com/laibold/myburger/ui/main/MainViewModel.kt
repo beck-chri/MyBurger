@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.laibold.myburger.model.Burger
+import com.laibold.myburger.model.DietType
 import com.laibold.myburger.service.BurgerService
 import java.text.DecimalFormat
 
@@ -27,7 +28,7 @@ class MainViewModel : ViewModel() {
         if (burger?.name != null) {
             return burger.name
         }
-        return "Burger of the Week"
+        return "Burger of the day"
     }
 
     fun getRandomBurgerIngredientCount(): Int {
@@ -53,6 +54,10 @@ class MainViewModel : ViewModel() {
             return burger.ingredients.joinToString(", ") { it.name }
         }
         return ""
+    }
+
+    fun getRandomBurgerDietType(): DietType? {
+        return randomBurger.value?.getDietType()
     }
 
 }
