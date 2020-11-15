@@ -1,0 +1,102 @@
+{
+      "BUN":[
+         {
+            "number":1,
+            "name":"Regular bun",
+            "price":85,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":2,
+            "name":"Sesame bun",
+            "price":95,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":3,
+            "name":"Vegan bun",
+            "price":55,
+            "diet_type":"VEGAN"
+         }
+      ],
+      "PATTY":[
+         {
+            "number":11,
+            "name":"Sweetpotato patty",
+            "price":145,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":12,
+            "name":"Chickpea patty",
+            "price":175,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":13,
+            "name":"Tempeh patty",
+            "price":180,
+            "diet_type":"VEGAN"
+         }
+      ],
+      "salad":[
+         {
+            "number":21,
+            "name":"Iceberg salat",
+            "price":18,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":22,
+            "name":"Rucola",
+            "price":25,
+            "diet_type":"VEGAN"
+         }
+      ],
+      "VEGETABLE":[
+         {
+            "number":31,
+            "name":"Tomato",
+            "price":25,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":32,
+            "name":"Gherkin",
+            "price":1,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":33,
+            "name":"Red onion rings",
+            "price":8,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":34,
+            "name":"Jalapenos",
+            "price":8,
+            "diet_type":"VEGAN"
+         }
+      ],
+      "SAUCE":[
+         {
+            "number":41,
+            "name":"Ketchup",
+            "price":10,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":42,
+            "name":"Sandwich sauce",
+            "price":15,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":43,
+            "name":"Honey mustard sauce",
+            "price":18,
+            "diet_type":"VEGAN"
+         }
+      ]
+}
