@@ -1,0 +1,144 @@
+{
+      "BUN":[
+         {
+            "number":1,
+            "name":["Standard-Brötchen","Regular bun"],
+            "price":70,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":2,
+            "name":["Sesam-Brötchen","Sesame bun"],
+            "price":90,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":3,
+            "name":["Vegan-Brötchen","Vegan bun"],
+            "price":80,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":4,
+            "name":["Vollkorn-Brötchen","whole grain bun"],
+            "price":110,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":5,
+            "name":["Brioche-Brötchen","brioche bun"],
+            "price":85,
+            "diet_type":"VEGGIE"
+         }
+      ],
+      "PATTY":[
+         {
+            "number":11,
+            "name":["Süßkartoffel-Bratling","Sweetpotato patty"],
+            "price":150,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":12,
+            "name":["Kichererbsen-Bratling","Chickpea patty"],
+            "price":180,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":13,
+            "name":["Tempeh-Bratling","Tempeh patty"],
+            "price":190,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":14,
+            "name":["Champignon-Bratling","Champignon patty"],
+            "price":175,
+            "diet_type":"VEGAN"
+         }
+      ],
+      "SALAD":[
+         {
+            "number":21,
+            "name":["Eisbergsalat","Iceberg salat"],
+            "price":28,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":22,
+            "name":["Rucola-Salat","Rucola"],
+            "price":35,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":23,
+            "name":["Römersalat","Romaine lettuce"],
+            "price":40,
+            "diet_type":"VEGAN"
+         }
+      ],
+      "VEGETABLE":[
+         {
+            "number":31,
+            "name":["Tomate","Tomato"],
+            "price":30,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":32,
+            "name":["Salzgurke","Gherkin"],
+            "price":20,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":33,
+            "name":["Rote Zwiebelringe","Red onion rings"],
+            "price":25,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":34,
+            "name":["Jalapeno-Ringe","Jalapenos"],
+            "price":30,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":35,
+            "name":["Karamellisierte Zwiebeln","Caramelized onions"],
+            "price":40,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":36,
+            "name":["Avocado","Avocado"],
+            "price":70,
+            "diet_type":"VEGAN"
+         }
+      ],
+      "SAUCE":[
+         {
+            "number":41,
+            "name":["Ketchup","Ketchup"],
+            "price":20,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":42,
+            "name":["Sandwich-Sauce","Sandwich sauce"],
+            "price":25,
+            "diet_type":"VEGGIE"
+         },
+         {
+            "number":43,
+            "name":["Honig-Senf-Sauce","Honey mustard sauce"],
+            "price":28,
+            "diet_type":"VEGAN"
+         },
+         {
+            "number":44,
+            "name":["Orangensauce","Orange sauce"],
+            "price":30,
+            "diet_type":"VEGAN"
+         }
+      ]
+}

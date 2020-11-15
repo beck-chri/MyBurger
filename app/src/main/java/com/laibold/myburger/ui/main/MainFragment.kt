@@ -1,21 +1,20 @@
 package com.laibold.myburger.ui.main
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.laibold.myburger.R
 import com.laibold.myburger.databinding.MainFragmentBinding
-import com.laibold.myburger.service.BurgerService
 
 class MainFragment : Fragment() {
 
     private lateinit var viewModel: MainViewModel
-    private lateinit var service: BurgerService
-
     private lateinit var binding: MainFragmentBinding
 
     companion object {
@@ -33,26 +32,30 @@ class MainFragment : Fragment() {
             false
         )
 
-        service = BurgerService(context!!)
-        service.importIngredients()
-
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        viewModel.setBurgers(service.getAll())
-        viewModel.setRandomBurger(service.getRandomBurger())
+        viewModel.randomBurger.observe(viewLifecycleOwner, {
+            binding.burgerOtdNameTv.text = viewModel.getRandomBurgerName()
 
-        var s = "--- Burger of the Week ---\n"
-        for (ingredient in viewModel.randomBurger.value?.ingredients!!) {
-            s += ingredient.name + "\n"
-        }
+            val ingredientsString = resources.getString(R.string.ingredients)
+                .format(viewModel.getRandomBurgerIngredientCount())
+            binding.numberOfIngredientsTv.text = ingredientsString
 
-        binding.message.text = s
+            binding.burgerOtdPriceTv.text = viewModel.getRandomBurgerPrice()
+            binding.ingredientsListTv.text = viewModel.getRandomBurgerIngredients()
+        })
+
+        binding.shuffleIngredientsBtn.setOnClickListener { onClickRandomBurger() }
 
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+    }
+
+    private fun onClickRandomBurger() {
+        viewModel.createRandomBurger()
     }
 
 }

@@ -2,7 +2,7 @@
     "BUN":[
         {
             "number":1,
-            "name":"veggie_bun",
+            "name":["veggie_bun",""],
             "price":2,
             "diet_type":"VEGGIE"
         }
@@ -10,15 +10,15 @@
     "PATTY":[
         {
             "number":11,
-            "name":"vegan_patty",
+            "name":["vegan_patty",""],
             "price":20,
-            "diet_type":"VEGAN"
+            "diet_type":"VEGGIE"
         },
         {
             "number":12,
-            "name":"veggie_patty",
+            "name":["veggie_patty",""],
             "price":300,
-            "diet_type":"VEGGIE"
+            "diet_type":"VEGAN"
         }
     ],
     "SALAD":[
@@ -27,25 +27,25 @@
     "VEGETABLE":[
         {
             "number":"21",
-            "name":"Tomate",
+            "name":["Tomate",""],
             "price":25,
             "diet_type":"VEGAN"
         },
         {
             "number":22,
-            "name":"Salzgurke",
+            "name":["Salzgurke",""],
             "price":1,
             "diet_type":"VEGANI"
         },
         {
             "number":23,
-            "name":"Rote Zwiebelringe",
+            "name":["Rote Zwiebelringe",""],
             "price":8,
             "diet_type":"VEGAN"
         },
         {
             "number":24,
-            "name":"Weiße Zwiebelringe",
+            "name":["Weiße Zwiebelringe",""],
             "price":8,
             "diet_type":"VEGAN"
         }

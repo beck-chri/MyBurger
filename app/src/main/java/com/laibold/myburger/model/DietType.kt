@@ -1,5 +1,7 @@
 package com.laibold.myburger.model
 
-enum class DietType {
-    VEGGIE, VEGAN
+import com.laibold.myburger.R
+
+enum class DietType(val stringId: Int) {
+    VEGGIE(R.string.veggie), VEGAN(R.string.vegan)
 }

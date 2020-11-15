@@ -1,4 +1,4 @@
-package com.laibold.myburger.persistence.repository
+package com.laibold.myburger.persistence.repository.ingredient
 
 import com.laibold.myburger.model.ingredient.Ingredient
 import com.laibold.myburger.model.ingredient.IngredientType

@@ -5,6 +5,7 @@ import android.util.Log
 import com.laibold.myburger.model.DietType
 import com.laibold.myburger.model.ingredient.Ingredient
 import com.laibold.myburger.model.ingredient.IngredientType
+import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -17,6 +18,7 @@ class JsonReader(private val context: Context) : RawReader {
     private val nameKey = "name"
     private val priceKey = "price"
     private val dietTypeKey = "diet_type"
+    private val langIndex = 0 // change to 1 for english names
 
     override fun readIngredients(fileName: String): MutableList<Ingredient> {
         val jsonString = getJsonDataFromAsset(context, fileName)
@@ -50,7 +52,10 @@ class JsonReader(private val context: Context) : RawReader {
     private fun getIngredientFromJsonObject(jObject: JSONObject, type: IngredientType): Ingredient {
         try {
             val number = jObject.get(numberKey) as Int
-            val name = jObject.get(nameKey) as String // TODO("Change to array[i]")
+
+            val names: JSONArray = jObject.getJSONArray(nameKey)
+            val name = names[langIndex] as String
+
             val price = jObject.get(priceKey) as Int
             val dietType: DietType = DietType.valueOf(jObject.get(dietTypeKey) as String)
 

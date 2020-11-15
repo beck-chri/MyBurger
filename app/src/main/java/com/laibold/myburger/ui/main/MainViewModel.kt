@@ -4,21 +4,55 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.laibold.myburger.model.Burger
+import com.laibold.myburger.service.BurgerService
+import java.text.DecimalFormat
 
 class MainViewModel : ViewModel() {
-    private val _burgers: MutableLiveData<MutableList<Burger>> = MutableLiveData()
-    val burgers: LiveData<MutableList<Burger>>
-        get() = _burgers
+    private var service: BurgerService = BurgerService()
 
     private val _randomBurger: MutableLiveData<Burger> = MutableLiveData()
     val randomBurger: LiveData<Burger>
         get() = _randomBurger
 
-    fun setBurgers(burgers: MutableList<Burger>) {
-        this._burgers.value = burgers
+    init {
+        _randomBurger.value = service.getRandomBurger()
     }
 
-    fun setRandomBurger(burger: Burger) {
-        this._randomBurger.value = burger
+    fun createRandomBurger() {
+        _randomBurger.value = service.getRandomBurger()
     }
+
+    fun getRandomBurgerName(): String {
+        val burger = randomBurger.value
+        if (burger?.name != null) {
+            return burger.name
+        }
+        return "Burger of the Week"
+    }
+
+    fun getRandomBurgerIngredientCount(): Int {
+        val burger = randomBurger.value
+        if (burger != null) {
+            return burger.getIngredientsSize()
+        }
+        return 0
+    }
+
+    fun getRandomBurgerPrice(): String {
+        val burger = randomBurger.value
+        if (burger != null) {
+            val df = DecimalFormat("0,00") //TODO("internationalisieren)
+            return df.format(burger.getPrice()) + " €"
+        }
+        return ""
+    }
+
+    fun getRandomBurgerIngredients(): String {
+        val burger = randomBurger.value
+        if (burger != null) {
+            return burger.ingredients.joinToString(", ") { it.name }
+        }
+        return ""
+    }
+
 }

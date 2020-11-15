@@ -1,4 +1,4 @@
-package com.laibold.myburger.persistence.repository
+package com.laibold.myburger.persistence.repository.burger
 
 import com.laibold.myburger.model.Burger
 
