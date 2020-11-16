@@ -55,6 +55,12 @@
             "name":["Champignon-Bratling","Champignon patty"],
             "price":175,
             "diet_type":"VEGAN"
+         },
+         {
+            "number":15,
+            "name":["Tofu-Bratling","Tofu patty"],
+            "price":175,
+            "diet_type":"VEGAN"
          }
       ],
       "SALAD":[
@@ -132,7 +138,7 @@
             "number":43,
             "name":["Honig-Senf-Sauce","Honey mustard sauce"],
             "price":28,
-            "diet_type":"VEGAN"
+            "diet_type":"VEGGIE"
          },
          {
             "number":44,
