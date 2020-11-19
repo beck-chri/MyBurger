@@ -29,4 +29,8 @@ data class Burger(var name: String, var ingredients: MutableList<Ingredient>) {
         return ingredients.size
     }
 
+    fun getIngredientString(): String {
+        return ingredients.joinToString(", ") { it.name }
+    }
+
 }

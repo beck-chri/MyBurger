@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.laibold.myburger.R
 import com.laibold.myburger.databinding.MainFragmentBinding
+import com.laibold.myburger.service.CurrencyFormatter
 
 class MainFragment : Fragment() {
 
@@ -22,31 +22,19 @@ class MainFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.main_fragment,
-            container,
-            false
+                inflater,
+                R.layout.main_fragment,
+                container,
+                false
         )
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        viewModel.randomBurger.observe(viewLifecycleOwner, {
-            binding.burgerOtdNameTv.text = viewModel.getRandomBurgerName()
-
-            var ingredientsString = resources.getString(R.string.ingredients)
-                .format(viewModel.getRandomBurgerIngredientCount())
-            val dietTypeStr = resources.getString(viewModel.getRandomBurgerDietType()?.stringId!!) //TODO
-            ingredientsString += " ($dietTypeStr)"
-            binding.numberOfIngredientsTv.text = ingredientsString
-
-            binding.burgerOtdPriceTv.text = viewModel.getRandomBurgerPrice()
-            binding.ingredientsListTv.text = viewModel.getRandomBurgerIngredients()
-        })
-
+        viewModel.randomBurger.observe(viewLifecycleOwner, Observer { showRandomBurger() })
         binding.shuffleIngredientsBtn.setOnClickListener { onClickRandomBurger() }
 
         return binding.root
@@ -58,6 +46,22 @@ class MainFragment : Fragment() {
 
     private fun onClickRandomBurger() {
         viewModel.createRandomBurger()
+    }
+
+    private fun showRandomBurger() {
+        val burger = viewModel.randomBurger.value
+        if (burger != null) {
+            if (burger.name == "") {
+                burger.name = resources.getString(R.string.burger_of_the_day)
+            }
+            binding.burgerOtdNameTv.text = burger.name
+            binding.numberOfIngredientsTv.text = viewModel.getIngredientsHeadline(
+                    resources.getString(R.string.ingredients),
+                    resources.getString(burger.getDietType().stringId)
+            )
+            binding.burgerOtdPriceTv.text = CurrencyFormatter.format(burger.getPrice())
+            binding.ingredientsListTv.text = burger.getIngredientString()
+        }
     }
 
 }

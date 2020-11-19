@@ -45,7 +45,7 @@ class BurgerService() {
         ingredients.addAll(s.getRandomIngredient(vegetables, Random.nextInt(1, 3)))
         ingredients.addAll(s.getRandomIngredient(sauces, Random.nextInt(1, 2)))
 
-        return Burger("Burger of the day", ingredients)
+        return Burger("", ingredients)
     }
 
 }

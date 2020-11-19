@@ -5,4 +5,5 @@
     <string name="veggie">veggie</string>
     <string name="vegan">vegan</string>
     <string name="ingredients">%d Ingredients</string>
+    <string name="burger_of_the_day">Burger of the day</string>
 </resources>

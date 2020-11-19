@@ -5,4 +5,5 @@
     <string name="vegan">vegan</string>
     <string name="random_burger">Zufälliger Burger</string>
     <string name="ingredients">%d Zutaten</string>
+    <string name="burger_of_the_day">Burger des Tages</string>
 </resources>
