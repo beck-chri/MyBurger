@@ -10,10 +10,7 @@ import java.util.*
 
 class DietTypeTest {
     private val appContext: Context = InstrumentationRegistry.getInstrumentation().targetContext
-
-    /**
-     * Run with default locale configuration
-     */
+    
     @Test
     fun getStringValue() {
         val veganStrId = DietType.VEGAN.stringId
