@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_outline_horizontal">12sp</dimen>
+    <dimen name="font_size_headline_1">25sp</dimen>
+    <dimen name="font_size_headline_2">20sp</dimen>
+    <dimen name="font_size_text">18sp</dimen>
+</resources>

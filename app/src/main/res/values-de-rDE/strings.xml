@@ -6,4 +6,10 @@
     <string name="random_burger">Zufälliger Burger</string>
     <string name="ingredients">%d Zutaten</string>
     <string name="burger_of_the_day">Burger des Tages</string>
+    <string name="settings">Einstellungen</string>
+    <string name="orders">Bestellungen</string>
+    <string name="design">Design</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="remember_order">Letzte Bestellung speichern</string>
+    <string name="site_notice">Impressum</string>
 </resources>

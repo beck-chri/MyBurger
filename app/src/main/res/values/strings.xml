@@ -6,4 +6,10 @@
     <string name="vegan">vegan</string>
     <string name="ingredients">%d Ingredients</string>
     <string name="burger_of_the_day">Burger of the day</string>
+    <string name="settings">Settings</string>
+    <string name="orders">Orders</string>
+    <string name="design">Design</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="remember_order">Remember last order</string>
+    <string name="site_notice">Site Notice</string>
 </resources>
