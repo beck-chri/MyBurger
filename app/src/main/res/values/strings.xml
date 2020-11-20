@@ -4,7 +4,7 @@
     <string name="dummy_burger_name" translatable="false">Lecker Vegan-Burger</string>
     <string name="dummy_price" translatable="false">6,50 €</string>
     <string name="dummy_ingredients_header" translatable="false">8 Zutaten</string>
-    <string name="dummy_ingredients_list" translatable="false">super lecker Tempeh, lecker Sösschen, ganz lecker Salaetchen, geschmeidige Avocado, knackige Guerkchen, fruchtige Tomaetchen und feurige Chiliflocken</string>
+    <string name="dummy_ingredients_list" translatable="false">super lecker Tempeh, lecker Sösschen, ganz lecker Salaetchen, geschmeidige Avocado, knackige Guerkchen, fruchtige Tomaetchen</string>
 
     <string name="desc_burger_image">Burger image</string>
     <string name="desc_shuffle">Shuffle</string>
