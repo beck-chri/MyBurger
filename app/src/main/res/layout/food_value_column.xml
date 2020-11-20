@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="myHeader"
+            type="java.lang.String" />
+
+        <variable
+            name="myValue"
+            type="java.lang.String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/food_value_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@{myHeader, default=`Kohlenhydr.:`}"
+            android:textSize="@dimen/font_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{myValue, default=`Value`}"
+            android:textSize="@dimen/font_size_small" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">MyBurger</string>
-    <string name="random_burger">Random Burger</string>
 
+    <string name="dummy_burger_name" translatable="false">Lecker Vegan-Burger</string>
+    <string name="dummy_price" translatable="false">6,50 €</string>
+    <string name="dummy_ingredients_header" translatable="false">8 Zutaten</string>
+    <string name="dummy_ingredients_list" translatable="false">super lecker Tempeh, lecker Sösschen, ganz lecker Salaetchen, geschmeidige Avocado, knackige Guerkchen, fruchtige Tomaetchen und feurige Chiliflocken</string>
+
+    <string name="desc_burger_image">Burger image</string>
+    <string name="desc_shuffle">Shuffle</string>
+
+    <string name="random_burger">Random Burger</string>
     <string name="veggie">veggie</string>
     <string name="vegan">vegan</string>
     <string name="ingredients">%d Ingredients</string>
@@ -12,4 +20,9 @@
     <string name="dark_mode">Dark Mode</string>
     <string name="remember_order">Remember last order</string>
     <string name="site_notice">Site Notice</string>
+    <string name="energy">Energy:</string>
+    <string name="fat">Fat:</string>
+    <string name="protein">Protein:</string>
+    <string name="carbohydrates">Carbs:</string>
+    <string name="order">Order</string>
 </resources>

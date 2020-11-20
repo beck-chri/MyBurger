@@ -22,14 +22,14 @@ class MainFragment : Fragment() {
     }
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(
-                inflater,
-                R.layout.main_fragment,
-                container,
-                false
+            inflater,
+            R.layout.main_fragment,
+            container,
+            false
         )
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
@@ -54,13 +54,13 @@ class MainFragment : Fragment() {
             if (burger.name == "") {
                 burger.name = resources.getString(R.string.burger_of_the_day)
             }
-            binding.burgerOtdNameTv.text = burger.name
-            binding.numberOfIngredientsTv.text = viewModel.getIngredientsHeadline(
-                    resources.getString(R.string.ingredients),
-                    resources.getString(burger.getDietType().stringId)
+            binding.burgerInfo.burgerOtdNameTv.text = burger.name
+            binding.burgerInfo.numberOfIngredientsTv.text = viewModel.getIngredientsHeadline(
+                resources.getString(R.string.ingredients),
+                resources.getString(burger.getDietType().stringId)
             )
-            binding.burgerOtdPriceTv.text = CurrencyFormatter.format(burger.getPrice())
-            binding.ingredientsListTv.text = burger.getIngredientString()
+            binding.burgerInfo.burgerOtdPriceTv.text = CurrencyFormatter.format(burger.getPrice())
+            binding.burgerInfo.ingredientsListTv.text = burger.getIngredientString()
         }
     }
 

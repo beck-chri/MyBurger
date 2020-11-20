@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MyBurger</string>
+
+    <string name="desc_burger_image">Burger-Bild</string>
+    <string name="desc_shuffle">Zufall</string>
+
     <string name="veggie">vegetarisch</string>
     <string name="vegan">vegan</string>
     <string name="random_burger">Zufälliger Burger</string>
@@ -12,4 +16,9 @@
     <string name="dark_mode">Dark Mode</string>
     <string name="remember_order">Letzte Bestellung speichern</string>
     <string name="site_notice">Impressum</string>
+    <string name="energy">Energie:</string>
+    <string name="fat">Fett:</string>
+    <string name="carbohydrates">Kohlenh:</string>
+    <string name="protein">Eiweiß:</string>
+    <string name="order">Bestellen</string>
 </resources>

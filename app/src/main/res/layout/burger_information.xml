@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:paddingHorizontal="@dimen/padding_outline_horizontal"
+        android:paddingBottom="30dp"
+        android:elevation="2dp"
+        android:background="?attr/colorOnPrimary">
+
+        <TextView
+            android:id="@+id/burger_otd_name_tv"
+            style="@style/headline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:gravity="center_vertical"
+            android:text="@string/dummy_burger_name" />
+
+        <TextView
+            android:id="@+id/burger_otd_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:text="@string/dummy_price"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/number_of_ingredients_tv"
+            style="@style/headline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/burger_otd_name_tv"
+            android:text="@string/dummy_ingredients_header" />
+
+        <TextView
+            android:id="@+id/ingredients_list_tv"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number_of_ingredients_tv"
+            android:text="@string/dummy_ingredients_list" />
+
+        <LinearLayout
+            android:id="@+id/food_value_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingredients_list_tv"
+            android:layout_marginTop="30dp"
+            android:baselineAligned="false"
+            android:paddingHorizontal="20dp">
+
+            <include
+                layout="@layout/food_value_column"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:myHeader="@{@string/energy}"
+                app:myValue="@{`500 kJ`}" />
+
+            <include
+                layout="@layout/food_value_column"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:myHeader="@{@string/fat}"
+                app:myValue="@{`20 g`}" />
+
+            <include
+                layout="@layout/food_value_column"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:myHeader="@{@string/carbohydrates}"
+                app:myValue="@{`50 g`}" />
+
+            <include
+                layout="@layout/food_value_column"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:myHeader="@{@string/protein}"
+                app:myValue="@{`6 g`}" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/food_value_wrapper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/order" />
+
+    </RelativeLayout>
+</layout>
