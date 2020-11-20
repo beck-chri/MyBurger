@@ -46,18 +46,28 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:elevation="2dp"
+            android:layout_height="match_parent"
             android:overScrollMode="never"
             android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/guideline">
+            app:layout_constraintTop_toTopOf="parent">
 
-            <include
-                android:id="@+id/burger_info"
-                layout="@layout/burger_information" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="483dp" />
+
+                <include
+                    android:id="@+id/burger_info"
+                    layout="@layout/burger_information" />
+
+            </LinearLayout>
 
         </ScrollView>
 

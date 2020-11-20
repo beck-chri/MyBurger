@@ -8,7 +8,7 @@
         android:layout_marginTop="0dp"
         android:paddingHorizontal="@dimen/padding_outline_horizontal"
         android:paddingBottom="30dp"
-        android:elevation="2dp"
+        android:elevation="4dp"
         android:background="?attr/colorOnPrimary">
 
         <TextView
