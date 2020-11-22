@@ -1,9 +1,11 @@
 package com.laibold.myburger.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.size
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -37,6 +39,12 @@ class MainFragment : Fragment() {
         viewModel.randomBurger.observe(viewLifecycleOwner, Observer { showRandomBurger() })
         binding.shuffleIngredientsBtn.setOnClickListener { onClickRandomBurger() }
 
+        binding.scrollView.setOnScrollChangeListener { _, _, scrollY, _, _ ->
+            val scaleVal = (1 + (scrollY.toFloat() / 9000))
+            binding.imageView.scaleX = scaleVal
+            binding.imageView.scaleY = scaleVal
+        }
+
         return binding.root
     }
 
@@ -61,6 +69,11 @@ class MainFragment : Fragment() {
             )
             binding.burgerInfo.burgerOtdPriceTv.text = CurrencyFormatter.format(burger.getPrice())
             binding.burgerInfo.ingredientsListTv.text = burger.getIngredientString()
+
+            binding.burgerInfo.energy.myValue = burger.energy.toString() + " kJ"
+            binding.burgerInfo.fat.myValue = burger.fat.toString() + " g"
+            binding.burgerInfo.carbs.myValue = burger.carbs.toString() + " g"
+            binding.burgerInfo.protein.myValue = burger.protein.toString() + " g"
         }
     }
 

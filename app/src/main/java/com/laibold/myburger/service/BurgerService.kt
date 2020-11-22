@@ -45,7 +45,14 @@ class BurgerService() {
         ingredients.addAll(s.getRandomIngredient(vegetables, Random.nextInt(1, 3)))
         ingredients.addAll(s.getRandomIngredient(sauces, Random.nextInt(1, 2)))
 
-        return Burger("", ingredients)
+        val burger = Burger("", ingredients)
+
+        burger.energy = Random.nextInt(200, 601)
+        burger.fat = Random.nextInt(3, 21)
+        burger.carbs = Random.nextInt(30, 81)
+        burger.protein = Random.nextInt(4, 21)
+
+        return burger
     }
 
 }
