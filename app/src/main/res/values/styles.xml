@@ -3,10 +3,12 @@
     <style name="headline_1">
         <item name="android:fontFamily">@font/poppins_black</item>
         <item name="android:textSize">@dimen/font_size_headline_1</item>
+        <item name="android:layout_marginEnd">@dimen/margin_headline_bottom</item>
     </style>
     <style name="headline_2">
         <item name="android:fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">@dimen/font_size_headline_2</item>
+        <item name="android:layout_marginEnd">@dimen/margin_headline_2_bottom</item>
     </style>
     <style name="text">
         <item name="android:fontFamily">@font/poppins_regular</item>

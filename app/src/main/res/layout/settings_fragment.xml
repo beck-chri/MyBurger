@@ -3,27 +3,113 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="@dimen/margin_outline_horizontal">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/settings_headline"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/headline_1"
-        android:text="@string/settings"
-        />
+        app:itemBackground="@color/teal"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"/>
 
     <TextView
+        android:id="@+id/settings_headline_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/settings_headline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/headline_1"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="@dimen/margin_outline_horizontal"
+        android:text="@string/settings" />
+
+    <TextView
+        android:id="@+id/settings_orders_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settings_headline_tv"
         app:layout_constraintLeft_toLeftOf="parent"
         style="@style/headline_2"
-        android:text="@string/orders"
-        />
+        android:layout_marginTop="25sp"
+        android:layout_marginLeft="@dimen/margin_outline_horizontal"
+        android:text="@string/orders" />
 
+    <TextView
+        android:id="@+id/settings_remember_order_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settings_orders_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/settings_remember_order_switch"
+        style="@style/text"
+        android:layout_marginLeft="@dimen/margin_outline_horizontal"
+        android:text="@string/remember_order"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/settings_remember_order_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_orders_tv"
+        android:layout_marginRight="@dimen/margin_outline_horizontal"/>
+
+    <TextView
+        android:id="@+id/settings_design_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settings_remember_order_switch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/headline_2"
+        android:layout_marginTop="25sp"
+        android:layout_marginLeft="@dimen/margin_outline_horizontal"
+        android:text="@string/design" />
+
+    <TextView
+        android:id="@+id/settings_dark_mode_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settings_design_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/settings_dark_mode_switch"
+        style="@style/text"
+        android:layout_marginLeft="@dimen/margin_outline_horizontal"
+        android:text="@string/dark_mode" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/settings_dark_mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_design_tv"
+        android:layout_marginRight="@dimen/margin_outline_horizontal"/>
+
+    <TextView
+        android:id="@+id/settings_site_notice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settings_dark_mode_switch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/settings_site_notice_btn"
+        style="@style/headline_2"
+        android:layout_marginTop="25sp"
+        android:layout_marginLeft="@dimen/margin_outline_horizontal"
+        android:text="@string/site_notice"/>
+
+    <ImageButton
+        android:id="@+id/settings_site_notice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/settings_dark_mode_switch"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="25sp"
+        android:layout_marginRight="@dimen/margin_outline_horizontal"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

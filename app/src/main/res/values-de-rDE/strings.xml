@@ -12,4 +12,6 @@
     <string name="dark_mode">Dark Mode</string>
     <string name="remember_order">Letzte Bestellung speichern</string>
     <string name="site_notice">Impressum</string>
+    <string name="menu">Menü</string>
+    <string name="my_orders">Meine Bestellungen</string>
 </resources>
