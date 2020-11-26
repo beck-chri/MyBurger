@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
     <dimen name="padding_outline_horizontal">12sp</dimen>
     <dimen name="font_size_headline_1">25sp</dimen>
     <dimen name="font_size_headline_2">20sp</dimen>
     <dimen name="font_size_text">16sp</dimen>
     <dimen name="font_size_small">14sp</dimen>
+    <dimen name="margin_headline_bottom">20sp</dimen>
+    <dimen name="margin_headline_2_bottom">10sp</dimen>
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">30sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">30sp</dimen>
+
 </resources>

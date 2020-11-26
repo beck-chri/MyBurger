@@ -1,9 +1,11 @@
 package com.laibold.myburger
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.laibold.myburger.persistence.repository.IngredientImporter
-import com.laibold.myburger.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,10 +15,19 @@ class MainActivity : AppCompatActivity() {
         IngredientImporter.importIngredients(applicationContext)
 
         setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
-                    .commitNow()
-        }
+        setUpNavigation()
+    }
+
+    private fun setUpNavigation() {
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
+
+        if (navHostFragment != null) {
+            NavigationUI.setupWithNavController(
+                bottomNavigationView,
+                navHostFragment.findNavController()
+            )
+        };
     }
 }

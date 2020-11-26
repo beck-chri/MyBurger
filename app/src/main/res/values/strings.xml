@@ -8,6 +8,7 @@
 
     <string name="desc_burger_image">Burger image</string>
     <string name="desc_shuffle">Shuffle</string>
+    <string name="desc_site_notice_btn">Go to site notice</string>
 
     <string name="random_burger">Random Burger</string>
     <string name="veggie">veggie</string>
@@ -25,4 +26,7 @@
     <string name="protein">Protein:</string>
     <string name="carbohydrates">Carbs:</string>
     <string name="order">Order</string>
+    <string name="menu">Menu</string>
+    <string name="my_orders">My Orders</string>
+
 </resources>

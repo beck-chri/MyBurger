@@ -1,29 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingHorizontal="@dimen/padding_outline_horizontal">
-
-    <TextView
-        android:id="@+id/settings_headline"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/headline_1"
-        android:text="@string/settings"
-        />
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/padding_outline_horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/settings_headline"
-        app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/headline_2"
-        android:text="@string/orders"
-        />
+        <TextView
+            android:id="@+id/settings_headline_tv"
+            style="@style/headline_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/settings"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/settings_orders_tv"
+            style="@style/headline_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:text="@string/orders"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_headline_tv" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/settings_remember_order_tv"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remember_order"
+            app:layout_constraintBaseline_toBaselineOf="@id/settings_remember_order_switch"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_orders_tv" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/settings_remember_order_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_orders_tv" />
+
+        <TextView
+            android:id="@+id/settings_design_tv"
+            style="@style/headline_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:text="@string/design"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_remember_order_switch" />
+
+        <TextView
+            android:id="@+id/settings_dark_mode_tv"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_mode"
+            app:layout_constraintBaseline_toBaselineOf="@id/settings_dark_mode_switch"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_design_tv" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/settings_dark_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_design_tv" />
+
+        <TextView
+            android:id="@+id/settings_site_notice_tv"
+            style="@style/headline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:text="@string/site_notice"
+            app:layout_constraintBottom_toBottomOf="@id/settings_site_notice_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_dark_mode_switch" />
+
+        <ImageButton
+            android:id="@+id/settings_site_notice_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:contentDescription="@string/desc_site_notice_btn"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_dark_mode_switch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

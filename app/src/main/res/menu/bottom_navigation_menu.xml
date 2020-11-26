@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="@string/burger_of_the_day" />
+    <item
+        android:id="@+id/menu_nav_bar"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_fastfood_24"
+        android:title="@string/menu" />
+    <item
+        android:id="@+id/orders_nav_bar"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="@string/my_orders" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/settings" />
+</menu>
