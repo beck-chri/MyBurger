@@ -32,6 +32,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_max="250dp" />
 
+        <include
+            android:id="@+id/rating_fragment_container"
+            layout="@layout/rating_fragment"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toTopOf="@id/number_of_ingredients_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/burger_otd_name_tv" />
+
         <TextView
             android:id="@+id/burger_otd_price_tv"
             android:layout_width="wrap_content"
@@ -52,7 +62,7 @@
             android:layout_marginTop="15dp"
             android:text="@string/dummy_ingredients_header"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/burger_otd_name_tv" />
+            app:layout_constraintTop_toBottomOf="@id/rating_fragment_container" />
 
         <TextView
             android:id="@+id/ingredients_list_tv"
