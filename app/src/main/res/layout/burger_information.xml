@@ -32,13 +32,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_max="250dp" />
 
-        <include
-            android:id="@+id/rating_fragment_container"
-            layout="@layout/rating_fragment"
-            android:layout_width="300dp"
+        <com.laibold.myburger.ui.view.RatingView
+            android:id="@+id/rating_view"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:layout_constraintBottom_toTopOf="@id/number_of_ingredients_tv"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/burger_otd_name_tv" />
 
@@ -62,7 +62,7 @@
             android:layout_marginTop="15dp"
             android:text="@string/dummy_ingredients_header"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rating_fragment_container" />
+            app:layout_constraintTop_toBottomOf="@id/rating_view" />
 
         <TextView
             android:id="@+id/ingredients_list_tv"

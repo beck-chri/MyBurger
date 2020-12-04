@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RatingView">
+<!--        <attr name="selectedIcon" format="reference" />-->
+<!--        <attr name="deselectedIcon" format="reference" />-->
+<!--        <attr name="rating" format="reference" />-->
+    </declare-styleable>
+
+</resources>
